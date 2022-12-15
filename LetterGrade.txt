@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+void gradsheet(int grade);
+
+
+int main(){
+
+int grade;
+	int z;
+
+
+
+printf("Enter your grade:   ");
+if (scanf("%d", &grade) != 1)
+    {
+      printf("This is not a number.\n");
+    }
+else if(grade>100){
+        printf("subra.\n");
+
+
+}
+else{
+    gradesheet(grade);
+}
+
+}
+
+    void gradesheet(int grade)
+    {
+
+
+
+
+
+
+
+    if (grade>=92&&grade<=100)
+	printf("Your letter grade is A");
+	else if (grade>=84&&grade<=91)
+	printf("Your letter grade is A-");
+	else if (grade>=76&&grade<=83)
+	printf("Your letter grade B");
+	else if (grade>=68&&grade<=75)
+	printf("Your letter grade is B-");
+	else if (grade>=60&&grade<=67)
+	printf("Your letter grade is C");
+	else if (grade>=50&&grade<=59)
+	printf("Your letter grade is D");
+	else if (grade<=49&&grade>=1)
+	printf("Your letter grade is F");
+
+
+
+	return 0;
+
+
+}

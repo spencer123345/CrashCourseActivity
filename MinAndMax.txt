@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+int mean(int m1);
+int median(int me1);
+
+int main()
+{
+
+   int menu, i, result, m1;
+ for (i=1; i>=1; i++){
+    printf("[0]- Exit\n");
+    printf("[1]- Mean\n");
+    printf("[2]- Median\n");
+    printf("[3]- Max\n");
+    printf("[4]- Min\n");
+
+do{
+             printf("\nSelect Function: ", i);
+             scanf("%d", &menu);
+}while(i<0);
+{
+
+if (menu<0||menu>=5){
+        printf("\nIncorrect output\n");
+  system("pause");  system("cls"); continue;}
+}
+if (menu==0){
+    printf("\nProgram Terminated.\n");
+} break;
+   }
+   result = mean(m1);
+   printf("mean = %d", result);
+
+return 0;
+}
+
+int mean(int m1)
+{
+    int count[100],get, menu;
+    if (menu=1);
+    do{
+    printf("[1]input number:", count);
+    scanf("%d", &get[count]);
+    }while(get<0);
+    for (count=2; count<=5; count++){
+         do{
+    printf("[%d]input number:", count);
+    scanf("%d", &get[count]);
+    }while(get<0);
+    }
+
+
+}

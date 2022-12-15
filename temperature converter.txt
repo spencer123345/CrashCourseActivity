@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //declare variable
+    int value;
+    char original, converted;
+    //fahrenheit to fahrenheit converter gi shortcut ra nako same sa Fto c kay Celcius
+    //ikaw na bahala kung gusto nimo ilisan ang mga variable name
+    float FtoF, FtoC, FtoK, CtoF, CtoC, CtoK, KtoF, KtoC, KtoK;
+
+
+    //display the choices
+    printf("[f]-Fahrenheit\n");
+    printf("[c]-Celcius\n");
+    printf("[k]-Kelvin\n\n");
+
+    //ask for the value to convert
+    printf("Input original temperature value:");
+    scanf("%d", &value);
+
+    //ask for original tenperature scale
+    printf("\nSelect original temperature scale:");
+    scanf(" %c", &original);
+
+    //assk for converted temperature scale
+    printf("\nSelect converted temperature scale:");
+    scanf(" %c", &converted);
+
+    //get the original scale
+    switch(original){
+
+        //if the original scale input is equal to character 'f' it will get in to this case 'f'
+        case 'f':{
+            //get the converted scale
+           switch(converted){
+                //if the converted scale input is equal to character 'f' it will get in to this case 'f'
+               case 'f':{
+                   //to calculate fahrenheit to fahrenheit temperature
+                    FtoF = value ;
+                    //display the converted temperature
+                    printf("%dF = %0.fF", value, FtoF);
+
+               }break;
+                //if the input is equal to character 'c' it will get in to this case 'c'
+               case 'c':{
+                   //to calculate fahrenheit to Celciuus temperature
+                   FtoC = (value-32)*5/9;
+                   //display the converted temperature
+                   printf("%dF = %0.2fC", value, FtoC);
+
+               }break;
+               case 'k':{
+                   FtoK = (value-32)*5/9;
+                   printf("%dF = %0.2fK", value, FtoK);
+
+               }break;
+           }
+
+        }break;
+
+        //if the original scale input is equal to character 'c' it will get in to this case 'c'
+        case 'c':{
+
+           switch(converted){
+
+               case 'f':{
+                    CtoF = (value*9/5)+32 ;
+                    printf("%dC = %0.2fF", value, CtoF);
+
+               }break;
+
+               case 'c':{
+                   CtoC = value;
+                   printf("%dC = %0.fC", value, CtoC);
+
+               }break;
+               case 'k':{
+                   CtoK = value+273.15;
+                   printf("%dC = %0.2fK", value, CtoK);
+
+               }break;
+           }
+
+        }break;
+        case 'k':{
+
+           switch(converted){
+
+               case 'f':{
+                    KtoF = (value-273.15)*9/5+32 ;
+                    printf("%dK = %0.2fF", value, KtoF);
+
+               }break;
+
+               case 'c':{
+                   KtoC = value-273.15;
+                   printf("%dK = %0.2fC", value, KtoC);
+
+               }break;
+               case 'k':{
+                   KtoK = value;
+                   printf("%dK = %0.fK", value, KtoK);
+
+               }break;
+           }
+
+        }break;
+
+    }
+
+    return 0;
+}
